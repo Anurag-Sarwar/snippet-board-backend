@@ -18,7 +18,7 @@ const server = http.createServer(app); // Wrap Express inside an HTTP server
 // 3. Set up WebSockets (Allowing our React frontend to connect)
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173", // Your Vite frontend URL
+        origin: "*", // The asterisk is a wildcard that means "Allow any domain"
         methods: ["GET", "POST"]
     }
 });
